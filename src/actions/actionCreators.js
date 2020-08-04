@@ -3,10 +3,15 @@ import {
   REMOVE_SERVICE,
   CHANGE_SERVICE_FIELD,
   EDIT_SERVICE,
+  CLEAR_SERVICE,
 } from "./actionTypes";
 
 export function addService(name, price) {
   return { type: ADD_SERVICE, payload: { name, price } };
+}
+
+export function clearService(name, price) {
+  return { type: CLEAR_SERVICE, payload: { name, price } };
 }
 
 export function removeService(id) {
